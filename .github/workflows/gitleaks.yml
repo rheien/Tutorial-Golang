@@ -1,0 +1,12 @@
+name: gitleaks
+
+on: [push, pull_request, workflow_dispatch]
+
+jobs:
+  gitleaks:
+    runs-on: ubuntu-latest
+    steps:
+      - name: gitleaks-action
+        uses: actions/checkout@v1
+      - name: gitleaks    
+        uses: rheien/gitleaks-action@master
